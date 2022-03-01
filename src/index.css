@@ -10,7 +10,7 @@ body, textarea {
 input, textarea, button {
   border: none;
   border-radius: 5px;
-  box-shadow: inset #cbcbd4 0 0 0 1px;
+  border: 1px solid #bebebe;
 }
 
 h1, label, p, a {

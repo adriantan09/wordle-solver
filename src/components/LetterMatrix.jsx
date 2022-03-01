@@ -29,10 +29,16 @@ export const LetterMatrix = ({ type, letters, setLetters }) => {
 }
 
 const LetterBox = styled.input`
-  width: 39px;
-  height: 39px;
-  text-align: center;
+  width: 35px;
+  height: 35px;
   font-size: 20pt;
+  text-align: center;
+  
+  @media screen and (min-width: 300px) {
+    width: 40px;
+    height: 40px;
+  }
+
 `
 
 const Form = styled.form`
