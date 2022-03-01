@@ -1,4 +1,4 @@
-body {
+body, textarea {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -7,31 +7,13 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-:root {
-  --green: #6aaa64;
-  --darkendGreen: #538d4e;
-  --yellow: #c9b458;
-  --darkendYellow: #b59f3b;
-  --lightGray: #d8d8d8;
-  --gray: #86888a;
-  --darkGray: #939598;
-  --white: #fff;
-  --black: #212121;
+input, textarea, button {
+  border: none;
+  border-radius: 5px;
+  box-shadow: inset #cbcbd4 0 0 0 1px;
 }
 
-.simple-keyboard {
-  max-width: 850px;
-  font-weight: 600;
-}
-
-.hg-button.hg-standardBtn.absent {
-  background: var(--gray);
-}
-
-.hg-button.hg-standardBtn.present {
-  background: var(--yellow);
-}
-
-.hg-button.hg-standardBtn.correct {
-  background: var(--green);
+h1, label, p, a {
+  margin: 10px 0;
+  font-weight: 500;
 }
