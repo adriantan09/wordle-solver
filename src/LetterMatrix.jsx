@@ -11,7 +11,7 @@ export const LetterMatrix = ({ type, letters, setLetters }) => {
   }
 
   return ( 
-    <Form>
+    <div>
         {[...Array(letters.length)].map((x, i) => (
             <LetterBox 
               key={i}
@@ -25,35 +25,26 @@ export const LetterMatrix = ({ type, letters, setLetters }) => {
               state={type}
             />
         ))}
-    </Form>
+    </div>
   )
 }
 
 const LetterBox = styled.input`
-  width: 25px;
-  height: 25px;
+  width: 40px;
+  height: 40px;
   font-size: 17pt;
   text-align: center;
   font-weight: bold;
-  
-  @media screen and (min-width: 450px) {
-    width: 40px;
-    height: 40px;
-  }
 
   background-color: ${(props) => (
     props.value && (
-      props.state === 'correct' && '#538d4e;'
+      (props.state === 'correct' && '#538d4e;')
       ||
-      props.state === 'present' && '#b59f3b;'
+      (props.state === 'present' && '#b59f3b;')
       ||
-      props.state === 'absent' && '#3a3a3c;'
+      (props.state === 'absent' && '#3a3a3c;')
     )
   )};
   color: white;
 
-`
-
-const Form = styled.form`
-  max-width: 300px;
 `
