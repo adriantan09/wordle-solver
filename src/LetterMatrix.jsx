@@ -22,6 +22,7 @@ export const LetterMatrix = ({ type, letters, setLetters }) => {
               onChange={e => setLetters(e, i)}
               value={letters[i].toUpperCase()}
               autoComplete='off'
+              state={type}
             />
         ))}
     </Form>
@@ -29,15 +30,27 @@ export const LetterMatrix = ({ type, letters, setLetters }) => {
 }
 
 const LetterBox = styled.input`
-  width: 30px;
-  height: 30px;
+  width: 25px;
+  height: 25px;
   font-size: 17pt;
   text-align: center;
+  font-weight: bold;
   
-  @media screen and (min-width: 300px) {
+  @media screen and (min-width: 450px) {
     width: 40px;
     height: 40px;
   }
+
+  background-color: ${(props) => (
+    props.value && (
+      props.state === 'correct' && '#538d4e;'
+      ||
+      props.state === 'present' && '#b59f3b;'
+      ||
+      props.state === 'absent' && '#3a3a3c;'
+    )
+  )};
+  color: white;
 
 `
 

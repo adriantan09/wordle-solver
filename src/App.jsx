@@ -1,7 +1,7 @@
 import { React, useState } from 'react';
 import styled from 'styled-components';
 import { validSolutions } from './source-code-arrays.js';
-import { LetterMatrix } from './components/LetterMatrix';
+import { LetterMatrix } from './LetterMatrix';
 
 const App = () => {
 
